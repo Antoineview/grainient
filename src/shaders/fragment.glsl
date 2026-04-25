@@ -118,7 +118,10 @@ void main() {
     colSum += u_colors[i] * w;
     wSum += w;
   }
-  vec3 col = colSum / max(wSum, 1e-4);
+  // Tiny epsilon: only guards against div-by-zero. A larger epsilon would
+  // dominate small wSum at low u_scale and wash distant pixels to black —
+  // we want the ratio to reflect the closest anchor regardless of magnitude.
+  vec3 col = colSum / max(wSum, 1e-30);
 
   float g = (grainHash(gl_FragCoord.xy + u_seed * 97.0) - 0.5) * u_grain;
   col += vec3(g);
