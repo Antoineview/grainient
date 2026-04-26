@@ -1,6 +1,9 @@
 {
-  "name": "grainient",
+  "name": "@antoineview/grainient",
   "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Grainy animated flowing-blob gradients for the web, powered by WebGL.",
   "type": "module",
   "main": "./dist/index.cjs",

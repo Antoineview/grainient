@@ -7,13 +7,13 @@ Framework-agnostic core + a thin React wrapper.
 ## Install
 
 ```sh
-npm install grainient
+npm install @antoineview/grainient
 ```
 
 ## Vanilla usage
 
 ```ts
-import { Grainient } from 'grainient';
+import { Grainient } from '@antoineview/grainient';
 
 const canvas = document.querySelector('canvas')!;
 const g = new Grainient(canvas, {
@@ -33,7 +33,7 @@ g.destroy();
 ## React usage
 
 ```tsx
-import { Grainient } from 'grainient/react';
+import { Grainient } from '@antoineview/grainient/react';
 
 export function Hero() {
   return (
